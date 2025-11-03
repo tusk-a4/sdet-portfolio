@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+<!--    Header Section     -->
+<div id = "header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li>
+                    <a href="#header">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header">
+            <h1>
+                Portfolio of Eric Morales<br>NJIT Student<BR>ECET Major
+            </h1>
+        </div>
+    </div>
+</div>
+
+<!--    About Me Section     -->
+<div id = "about">
+    <div class="container">
+        <div class="row">
+            <div class="image">
+                <img src="images/pic.jpg">
+            </div>
+                <div class="info">
+                    <h1 class="subtitle">
+                        About Me
+                    </h1>
+                    <p>
+                        <br>My Name is Eric David Morales<br>I was born on September 4, 2007 in White Plains, New York<br>I live in Yonkers, New York and I am currently living in Newark, New Jersey<br>Although I was born in New York, my family is from Puerto Rico
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick = "opentab('education')">Education</p>
+                        <p class="tab-links" onclick = "opentab('interests')">Interests</p>
+                        <p class="tab-links" onclick = "opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick = "opentab('skills')">Skills</p>
+                    </div>
+<!--                         Education Section              -->
+                    <div class="tab-contents active-tab" id = "education">
+                        <ul>
+                            <li>
+                                <span>High School</span><br>Archbishop Stepinac High School | White Plains, New York<br>Graduation: May 2025
+                            </li>
+                            <li>
+                                <span>College</span><br>New Jersey Institute of Technology | Newark, New Jersey<br>Expected Graduation: May 2029<br>Major: Electrical and Computer Engineering Technology
+                            </li>
+                        </ul>
+                    </div>
+<!--                         Interests Section              -->
+                    <div class="tab-contents" id = "interests">
+                        <ul>
+                            <li>
+                                <span>Playing Video Games</span><br>I don't have a favorite genre since I like to try anything<br> Top 10 Games of All Time:<br>1. Final Fantasy IX<br>2. Bloodborne<br>3. Metal Gear Solid 2: Sons of Liberty<br>4. Clair Obscur: Expedition 33<br>5. The Legend of Zelda: Majora's Mask<br>6. Pokemon Alpha Sapphire<br>7. Final Fantasy X<br>8. Final Fantasy VII<br>9. Kingdom Hearts II Final Mix<br>10. Ninja Gaiden 2 Black
+                            </li>
+                            <li>
+                                <span>Learning About Electronic Hardware</span><br>Find it very interesting<br>Even more fun when doing it myself and soldering
+                            </li>
+                        </ul>
+                    </div>
+<!--                         Projects Section              -->
+                    <div class="tab-contents" id = "projects">
+                        <ul>
+                            <li>
+                                <span>For my Engineering Technology Class (Present)</span><br>Researching and writing about my future career trajectory
+                            </li>
+                            <li>
+                                <span>2020 Project</span><br>I moddified an original Game Boy Advance by replacing the original, unlit screen with a modern backlit IPS screen
+                            </li>
+                            <li>
+                                <span>Physics Project For High School (2024)</span><br>I soldered components to a circuit so that when it is connected to power, the LED lights would light it<br>It took me 6 hours but was fun throughout it all
+                            </li>
+                        </ul>
+                    </div>
+<!--                         Skills Section              -->
+                    <div class="tab-contents" id = "skills">
+                        <ul>
+                            <li>
+                                <span>Soldering</span><br>Basic skills and understanding
+                            </li>
+                            <li>
+                                <span>Python Coding</span><br>Basic skills and understanding
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--    Contact Section   -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact">
+                <h1 class="subtitle">
+                    Contact Information
+                </h1>
+                <p><i class="fas fa-envelope"></i> ericdavid0904@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 914-715-2028</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
